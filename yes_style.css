@@ -5,9 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; 
-    background-color: #fff5f5; 
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7); 
     font-family: 'Indie Flower', cursive;
-    overflow: hidden; 
+    overflow: hidden;
+    position: relative;
 }
 
 .container {
@@ -18,7 +19,8 @@ body {
     border: 3px solid #ff6b81; 
     box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3); 
     max-width: 600px; 
-    width: 90%; 
+    width: 90%;
+    position: relative;
 }
 
 .header_text {
@@ -26,7 +28,7 @@ body {
     font-weight: bold;
     color: #ff6b81; 
     margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.2); 
+    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.3); 
 }
 
 .gif_container {
@@ -40,4 +42,16 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 10px; 
+}
+
+.heart {
+    position: fixed;
+    font-size: 24px;
+    color: red;
+    animation: floatUp 3s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
 }

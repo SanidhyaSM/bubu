@@ -5,27 +5,29 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #fff5f5;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4, #ff1493);
     font-family: 'Indie Flower', cursive;
     overflow: hidden;
+    position: relative;
 }
 
 .container {
     text-align: center;
-    background-color: #ffebee;
+    background-color: #ffe4e1;
     padding: 40px;
     border-radius: 20px;
     border: 3px solid #ff6b81;
     box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
     max-width: 400px;
     width: 90%;
+    position: relative;
 }
 
 .header_text {
     font-size: 36px;
-    color: #ff6b81;
+    color: #ff1493;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.2);
+    text-shadow: 2px 2px 4px rgba(255, 20, 147, 0.3);
 }
 
 .gif_container img {
@@ -84,18 +86,15 @@ body {
     animation: wiggle 0.5s ease-in-out;
 }
 
-@keyframes heartFade {
-    0% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(1.5); }
+.heart {
+    position: fixed;
+    font-size: 40px;
+    color: #ff1493;
+    animation: floatUp 3s linear infinite;
+    opacity: 0.8;
 }
 
-.heart {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    transform: translate(-50%, -50%);
-    animation: heartFade 1s ease-out forwards;
-    background-color: #ff6b81;
-    border-radius: 50%;
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
 }
